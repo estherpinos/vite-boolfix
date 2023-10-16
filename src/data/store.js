@@ -2,7 +2,10 @@ import { reactive } from 'vue';
 
 // le proprietà dello'oggetto reactive sono proprità reattive 
 export const store = reactive({
-  apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0',
+  apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=1322102c4d21b68ceac72bc501086a5f&language=it_IT&query=',
+  apiKey:'1322102c4d21b68ceac72bc501086a5f',
+  object:[],
+  datoInput:"",
  
 
 })

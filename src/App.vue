@@ -16,12 +16,25 @@ export default{
       store
     }
   },
+
+  methods:{
+    getApi(){
+      axios.get(store.apiUrl+store.datoInput)
+        .then( res =>{
+          store.object = res.data.results;
+          console.log(store.object)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+  }
 }
 </script>
 
 
 <template>
- <Header></Header>
+ <Header @go="getApi"></Header>
  <Main></Main>
 </template>
 

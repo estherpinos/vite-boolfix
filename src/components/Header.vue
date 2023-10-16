@@ -1,6 +1,16 @@
 <script>
+
+import { store } from '../data/store';
 export default{
-  name:'Header'
+  name:'Header',
+  data(){
+    return{
+      store
+    }
+  },
+  methods:{
+    
+  }
 }
 
 </script>
@@ -14,9 +24,9 @@ export default{
       </div>
     
       <div class="input-group mb-3 search d-flex align-items-center">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Recipient's username" v-model="store.datoInput" >
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button">Button</button>
+          <button class="btn btn-outline-secondary" type="button" @click="$emit ('go')">Button</button>
         </div>
 
       </div>
