@@ -22,12 +22,21 @@ export default{
       axios.get(store.apiUrl+store.datoInput)
         .then( res =>{
           store.object = res.data.results;
-          console.log(store.object)
+          
+        })
+        .catch(err => {
+          console.log(err);
+        }),
+        axios.get(store.apiUrl2+store.datoInput)
+        .then( res =>{
+          store.object2 = res.data.results;
+          
         })
         .catch(err => {
           console.log(err);
         })
-    }
+    },
+  
   }
 }
 </script>
