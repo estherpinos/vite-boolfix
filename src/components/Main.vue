@@ -23,15 +23,9 @@ export default{
 
 <template>
   <main>
-    <div class="container m-4 ">
-      <div class="row justify-content-evenly ">
+    <div class="container mt-4 ">
+      <div class="row justify-content-start ">
 
-        <!-- COPERTA -->
-        <Card class="card-img" v-for="item2 in store.object"
-        key="item2.id"
-        :image="item2.poster_path"
-        >
-        </Card>
 
         <!-- HOVER -->
         <Hover v-for="item in store.object"
@@ -52,9 +46,7 @@ export default{
 
 <style lang="scss" scoped>
 
-.card-img:hover{
-  opacity: 0;
-}
+
 
 
 
