@@ -1,7 +1,7 @@
 <script>
 import Hover from './partials/Hover.vue';
 import { store } from '../data/store';
-import Card from './partials/Card.vue';
+
 
 
 export default{
@@ -14,8 +14,8 @@ export default{
     },
 
     components: {
-    Hover,
-    Card
+    Hover
+  
 }
 }
 
@@ -27,7 +27,7 @@ export default{
       <div class="row justify-content-evenly ">
 
         <!-- COPERTA -->
-        <Card v-for="item2 in store.object"
+        <Card class="card-img" v-for="item2 in store.object"
         key="item2.id"
         :image="item2.poster_path"
         >
@@ -40,6 +40,7 @@ export default{
         :originalTitle="item.original_title"
         :language="item.original_language"
         :voto="item.vote_average"
+        :image="item.poster_path"
         >
         </Hover>
       </div>
@@ -50,6 +51,10 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+.card-img:hover{
+  opacity: 0;
+}
 
 
 
