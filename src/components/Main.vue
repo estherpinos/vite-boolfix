@@ -26,7 +26,8 @@ export default{
     <div class="container mt-4 ">
 
       <!-- films -->
-      <h4>Films</h4>
+      <h4 v-if="store.object.length>0">Films</h4>
+
       <div class="row justify-content-start ">
 
 
@@ -36,7 +37,7 @@ export default{
         :title="item.title"
         :originalTitle="item.original_title"
         :language="item.original_language"
-        :voto="item.vote_average"
+        :voto="item.vote_average.toString()"
         :image="item.poster_path"
         >
         </Hover>
@@ -45,16 +46,16 @@ export default{
 
 
       <!-- serie -->
-      <h4>Serie</h4>
+      <h4 class="mt-5" v-if="store.object2.length>0">Serie</h4>
       <div class="row justify-content-start ">
 
       <!-- HOVER -->
       <Hover v-for="item in store.object2"
       :key="item.id"
-      :title="item.title"
+      :title="item.name"
       :originalTitle="item.original_title"
       :language="item.original_language"
-      :voto="item.vote_average"
+      :voto="item.vote_average.toString()"
       :image="item.poster_path"
       >
       </Hover>
