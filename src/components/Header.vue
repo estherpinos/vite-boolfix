@@ -22,7 +22,8 @@ export default{
       <div class="logo d-flex align-items-center ">
         <img src="logo-boolflix.png" alt="">
         <div class="menu-header d-flex align-items-center ">
-          <ul class=" d-inline-block d-flex ">
+          <nav>
+            <ul class=" d-inline-block d-flex list-unstyled ms-5">
             <li><a href="#">Home</a></li>
             <li><a href="#">Serie TV</a></li>
             <li><a href="#">Film</a></li>
@@ -30,6 +31,8 @@ export default{
             <li><a href="#">Aggiunti di recente</a></li>
             <li><a href="#">La mia lista</a></li>
           </ul>
+          </nav>
+         
         </div>
       </div>
     
@@ -87,15 +90,18 @@ export default{
         ul{
         text-decoration: none;
         margin: 0;
+        
         li{
-          text-decoration: none;
           margin-right: 10px;
+          
   
           a{
             color: white;
             text-decoration: none;
             font-size: 12px;
+            
           }
+         
         }
       }
       }
